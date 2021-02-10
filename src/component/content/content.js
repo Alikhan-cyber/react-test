@@ -1,26 +1,25 @@
 import React, { Component } from 'react'
 import './content.css'
 
-
 export default class Content extends Component{
     render(){
-        const {array} = this.props;
-        const object = array.map(item =>{
-            const {id,name} = item
-            return(
-                <li className="content" key = {id}>
-                    <h1>{id}</h1>
-                    <h2>{name}</h2>
-                    <button onClick ={()=> this.props.delete(id)}>Удалить</button>
-                </li>
-            )
-        })
+        const { data, deleteItem } = this.props;
         return(
-          <div>
-              <ul>
-                  {object}
-              </ul>
-          </div>
+            <div>
+                <ul>
+                    {data.map(item =>{
+                        const { id, name, image } = item
+                        return(
+                            <li className="content" key={id}>
+                                <h1>{id}</h1>
+                                <h2>{name}</h2>
+                                <img alt="" src={image} />
+                                <button type="button" onClick ={()=> deleteItem(id)}>Удалить</button>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
         )
     }
 }
