@@ -1,0 +1,33 @@
+.header {
+
+}
+.menu ul {
+	display: flex;
+}
+.menu ul li {
+	display: flex;
+	margin-left: 50px;
+}
+.menu ul li a {
+	color: #1A2026;
+	font-family: 'Arial', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.menu ul li a:hover {
+	color: #00e0d0;
+	transition: 0.5s all ease;
+	text-transform: uppercase;
+}
+.header-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.logo {
+	margin: 15px 0px 0px 50px;
+}
+.menu {
+	margin: 36px 50px 0px 0px;
+}
